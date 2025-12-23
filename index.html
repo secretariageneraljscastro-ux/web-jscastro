@@ -947,7 +947,120 @@
 }
 }
 /* aquí continúa tu CSS original */
+/* ================================
+   AJUSTES DEFINITIVOS PARA MÓVIL
+   NO TOCAR EL RESTO DEL CSS
+================================ */
 
+@media (max-width: 768px) {
+
+  /* CONTENEDOR GENERAL */
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+
+  /* CABECERA */
+  header {
+    padding: 12px 0 !important;
+    text-align: center;
+  }
+
+  .nav {
+    flex-direction: column;
+    height: auto;
+    gap: 8px;
+  }
+
+  .logo-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-img {
+    width: 90px !important;
+    height: 90px !important;
+    margin: 0 auto;
+  }
+
+  .logo-text-main,
+  .logo-text-sub {
+    text-align: center;
+    color: #ffffff !important;
+  }
+
+  /* MENÚ */
+  .menu-inline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .menu-links a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    color: #ffffff !important;
+  }
+
+  /* HERO */
+  .hero {
+    padding-top: 10px;
+  }
+
+  .hero-card {
+    margin: 0 auto;
+    padding: 22px 18px;
+    min-height: auto;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* TÍTULO PRINCIPAL */
+  .hero h1,
+  .hero-title,
+  .hero-title-singleline {
+    text-align: center !important;
+    font-size: 1.9rem !important;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  /* TEXTO */
+  .hero-text,
+  .hero-subtitle {
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  /* BOTONES */
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* GRIDS */
+  .news-grid,
+  .exec-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
 </style>
 </head>
 <body>
