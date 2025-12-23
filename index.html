@@ -948,9 +948,7 @@
             </div>
           </div>
         </a>
-        <button class="hamburger" aria-label="Menú" onclick="toggleMenu()">
-         ☰
-        </button> 
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
         <div class="menu-inline">
           <div class="menu-links">
             <a href="#inicio">Inicio</a>
@@ -962,9 +960,7 @@
           </div>
         </div>
       </nav>
-    </div>
-  </header>
-  <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu" id="mobileMenu">
   <a href="#inicio" onclick="toggleMenu()">Inicio</a>
   <a href="#actualidad" onclick="toggleMenu()">Actualidad</a>
   <a href="#ejecutiva" onclick="toggleMenu()">Ejecutiva local</a>
@@ -972,6 +968,9 @@
   <a href="#estatutos" onclick="toggleMenu()">Estatutos</a>
   <a href="#contacto" onclick="toggleMenu()">Contacto</a>
 </div>
+    </div>
+  </header>
+
 <!-- Carousel placeholder inserted -->
 
 <section id="carrusel" style="padding:50px 0;">
@@ -1742,10 +1741,10 @@ show(0);
     </script>
   </footer>
   <script>
-  function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-  }
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
 </script>
 </body>
 </html>
