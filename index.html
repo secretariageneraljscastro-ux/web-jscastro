@@ -1090,7 +1090,49 @@
 
 /* ===== SOLO MÓVIL ===== */
 @media (max-width: 768px) {
+/* ===== ARREGLO CARRUSEL EN MÓVIL ===== */
+@media (max-width: 768px) {
 
+  /* Caja del carrusel */
+  #carrusel,
+  .carousel,
+  .slider {
+    background: #ffffff !important;
+    border-radius: 18px;
+    padding: 16px;
+    margin: 20px auto;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  }
+
+  /* Slides */
+  .slide {
+    background: transparent;
+  }
+
+  /* PUNTOS DEL CARRUSEL */
+  .carousel-dots,
+  .dots {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .carousel-dots span,
+  .dots span {
+    width: 10px;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .carousel-dots .active,
+  .dots .active {
+    background: #c1001e;
+  }
+
+}
   /* Ocultar texto del logo */
   .logo-text-main,
   .logo-text-sub {
