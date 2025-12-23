@@ -930,6 +930,79 @@
     grid-template-columns: 1fr;
     gap: 22px;
   }
+  /* ===== FIX MENÚ MÓVIL ===== */
+@media (max-width: 768px) {
+
+  /* Ocultar menú de escritorio */
+  .menu-inline {
+    display: none !important;
+  }
+
+  /* Mostrar botón hamburguesa */
+  .hamburger {
+    display: block !important;
+    margin: 0 auto;
+  }
+
+  /* Menú móvil oculto por defecto */
+  .mobile-menu {
+    display: none;
+  }
+
+  /* Menú móvil abierto */
+  .mobile-menu.open {
+    display: flex;
+  }
+}
+  /* ===== CENTRAR TÍTULO HERO EN MÓVIL ===== */
+@media (max-width: 768px) {
+
+  .hero h1,
+  .hero-title,
+  .hero-title-singleline {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
+  /* =====================================
+   FIX DEFINITIVO CARRUSEL EN MÓVIL
+===================================== */
+@media (max-width: 768px) {
+
+  /* El hero no se monta encima */
+  .hero,
+  .hero-card {
+    position: relative !important;
+    margin-top: 0 !important;
+  }
+
+  /* Carrusel como bloque propio */
+  #carrusel,
+  .carousel,
+  .slider {
+    display: block !important;
+    width: 100% !important;
+    margin: 32px auto 48px auto !important;
+    padding: 18px !important;
+    background: #ffffff !important;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+  }
+
+  /* Slides normales, sin grid raro */
+  .slide {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Quitar restos de columnas del desktop */
+  .hero-inner {
+    display: block !important;
+  }
+
+}
 }
 </style>
 </head>
