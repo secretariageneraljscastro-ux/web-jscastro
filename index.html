@@ -1131,48 +1131,6 @@
   .slide {
     background: transparent;
   }
-/* ===== ARREGLO DEFINITIVO ESPACIADO EN MÓVIL ===== */
-@media (max-width: 768px) {
-
-  /* Separar bien todas las secciones */
-  section {
-    margin-top: 40px !important;
-  }
-
-  /* Que el primer bloque no se pegue a la cabecera */
-  main > section:first-of-type {
-    margin-top: 20px !important;
-  }
-
-  /* Evitar solapes raros */
-  .hero,
-  .hero-card,
-  .news-grid {
-    margin-top: 20px !important;
-  }
-}
-  /* PUNTOS DEL CARRUSEL */
-  .carousel-dots,
-  .dots {
-    margin-top: 12px;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .carousel-dots span,
-  .dots span {
-    width: 10px;
-    height: 10px;
-    background: #e0e0e0;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  .carousel-dots .active,
-  .dots .active {
-    background: #c1001e;
-  }
 
 }
   /* Ocultar texto del logo */
@@ -1190,6 +1148,26 @@
   .hamburger {
     display: block;
   }
+  /* ===== ARREGLO REAL CARRUSEL + CONTENIDO EN MÓVIL ===== */
+@media (max-width: 768px) {
+
+  /* El carrusel ocupa su espacio real */
+  #carrusel {
+    margin-bottom: 40px !important;
+  }
+
+  /* El bloque siguiente baja correctamente */
+  #inicio {
+    margin-top: 0 !important;
+  }
+
+  /* Evitar que el hero se suba */
+  .hero,
+  .hero-card {
+    margin-top: 0 !important;
+    position: relative !important;
+  }
+}
 }
 }
 </style>
