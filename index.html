@@ -849,6 +849,9 @@
 /* ===== AJUSTES MÓVIL BÁSICOS ===== */
 @media (max-width: 768px) {
 
+
+
+
   /* Evitar que todo se salga de la pantalla */
   body {
     padding: 0;
@@ -1059,7 +1062,51 @@
   .exec-grid {
     grid-template-columns: 1fr;
   }
+/* ===== MENÚ HAMBURGUESA ===== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
 
+/* Menú desplegable móvil */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  background: #c1001e;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.mobile-menu a {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ===== SOLO MÓVIL ===== */
+@media (max-width: 768px) {
+
+  /* Ocultar texto del logo */
+  .logo-text-main,
+  .logo-text-sub {
+    display: none;
+  }
+
+  /* Ocultar menú grande */
+  .menu-inline {
+    display: none;
+  }
+
+  /* Mostrar hamburguesa */
+  .hamburger {
+    display: block;
+  }
+}
 }
 </style>
 </head>
@@ -1078,7 +1125,9 @@
             </div>
           </div>
         </a>
-
+        <button class="hamburger" aria-label="Menú" onclick="toggleMenu()">
+         ☰
+        </button> 
         <div class="menu-inline">
           <div class="menu-links">
             <a href="#inicio">Inicio</a>
@@ -1092,6 +1141,14 @@
       </nav>
     </div>
   </header>
+  <div id="mobileMenu" class="mobile-menu">
+  <a href="#inicio" onclick="toggleMenu()">Inicio</a>
+  <a href="#actualidad" onclick="toggleMenu()">Actualidad</a>
+  <a href="#ejecutiva" onclick="toggleMenu()">Ejecutiva local</a>
+  <a href="#ficha-acceso" onclick="toggleMenu()">Ficha de acceso</a>
+  <a href="#estatutos" onclick="toggleMenu()">Estatutos</a>
+  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+</div>
 <!-- Carousel placeholder inserted -->
 
 <section id="carrusel" style="padding:50px 0;">
@@ -1861,5 +1918,11 @@ show(0);
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </footer>
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  }
+</script>
 </body>
 </html>
