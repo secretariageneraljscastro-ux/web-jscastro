@@ -869,7 +869,69 @@
   text-align: center;
   line-height: 1.2;
 }
+/* ===== AJUSTES MÓVIL BÁSICOS ===== */
+@media (max-width: 768px) {
 
+  /* Evitar que todo se salga de la pantalla */
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  section,
+  header,
+  main,
+  div {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* CABECERA Y MENÚ */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+
+  /* TÍTULOS */
+  h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  /* BOTONES */
+  button,
+  .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
 /* aquí continúa tu CSS original */
 
 </style>
