@@ -1131,7 +1131,26 @@
   .slide {
     background: transparent;
   }
+/* ===== ARREGLO DEFINITIVO ESPACIADO EN MÓVIL ===== */
+@media (max-width: 768px) {
 
+  /* Separar bien todas las secciones */
+  section {
+    margin-top: 40px !important;
+  }
+
+  /* Que el primer bloque no se pegue a la cabecera */
+  main > section:first-of-type {
+    margin-top: 20px !important;
+  }
+
+  /* Evitar solapes raros */
+  .hero,
+  .hero-card,
+  .news-grid {
+    margin-top: 20px !important;
+  }
+}
   /* PUNTOS DEL CARRUSEL */
   .carousel-dots,
   .dots {
