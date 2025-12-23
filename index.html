@@ -930,7 +930,44 @@
     width: 100%;
     max-width: 100%;
   }
+/* ===== ARREGLO CABECERA EN MÓVIL ===== */
+@media (max-width: 768px) {
 
+  header {
+    padding: 10px !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 10px;
+  }
+
+  header img {
+    width: 70px !important;
+    height: auto !important;
+  }
+
+  header h1,
+  header .titulo,
+  header .site-title {
+    font-size: 1.1rem !important;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  /* Quitar altura excesiva roja */
+  .header,
+  .cabecera,
+  .top,
+  .hero {
+    min-height: auto !important;
+  }
+
+  /* Subir el contenido principal */
+  main,
+  #inicio {
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+  }
+}
 }
 /* aquí continúa tu CSS original */
 
