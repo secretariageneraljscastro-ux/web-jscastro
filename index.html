@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juventudes socialistas de castro urdiales</title>
- 
-  <style>
+ <style>
     
     :root {
       --rojo: #e53935;
@@ -761,7 +760,7 @@
         grid-template-columns: 1fr;
       }
     }
-  main{padding-top:10px !important; margin-top:0 !important;}
+  main{padding-top:10px !important; margin-top:0 !important;} header * { color:white !
 
 .menu-links a {
   padding: 6px 10px;
@@ -791,6 +790,14 @@
 }
 .hero-text-left {
   text-align: left;
+}
+.hero-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 12px;
+  line-height: 1.18;
+  width: 100%;
+  white-space: normal;
 }
 .hero-title .linea1 {
   display: inline-block;
@@ -839,17 +846,127 @@
   text-align: center;
   line-height: 1.2;
 }
-/* ===============================
-   MÓVIL LIMPIO Y CONTROLADO
-   (NO AFECTA A ORDENADOR)
-================================ */
+/* ===== AJUSTES MÓVIL BÁSICOS ===== */
 @media (max-width: 768px) {
 
+
+
+
+  /* Evitar que todo se salga de la pantalla */
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  section,
+  header,
+  main,
+  div {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* CABECERA Y MENÚ */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+
+  /* TÍTULOS */
+  h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  /* BOTONES */
+  button,
+  .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+/* ===== ARREGLO CABECERA EN MÓVIL ===== */
+
+
+  header {
+    padding: 10px !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 10px;
+  }
+
+  header img {
+    width: 70px !important;
+    height: auto !important;
+  }
+
+  header h1,
+  header .titulo,
+  header .site-title {
+    font-size: 1.1rem !important;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  /* Quitar altura excesiva roja */
+  .header,
+  .cabecera,
+  .top,
+  .hero {
+    min-height: auto !important;
+  }
+
+  /* Subir el contenido principal */
+  main,
+  #inicio {
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+  }
+}
+}
+/* aquí continúa tu CSS original */
+/* ================================
+   AJUSTES DEFINITIVOS PARA MÓVIL
+   NO TOCAR EL RESTO DEL CSS
+================================ */
+
+@media (max-width: 768px) {
+
+  /* CONTENEDOR GENERAL */
   body {
     overflow-x: hidden;
   }
 
-  /* ===== CABECERA ===== */
+  .container {
+    padding: 0 14px;
+  }
+
+  /* CABECERA */
   header {
     padding: 12px 0 !important;
     text-align: center;
@@ -857,19 +974,165 @@
 
   .nav {
     flex-direction: column;
-    gap: 10px;
+    height: auto;
+    gap: 8px;
   }
 
   .logo-wrap {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
   .logo-img {
     width: 90px !important;
     height: 90px !important;
+    margin: 0 auto;
   }
 
+  .logo-text-main,
+  .logo-text-sub {
+    text-align: center;
+    color: #ffffff !important;
+  }
+
+  /* MENÚ */
+  .menu-inline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .menu-links a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    color: #ffffff !important;
+  }
+
+  /* HERO */
+  .hero {
+    padding-top: 10px;
+  }
+
+  .hero-card {
+    margin: 0 auto;
+    padding: 22px 18px;
+    min-height: auto;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* TÍTULO PRINCIPAL */
+  .hero h1,
+  .hero-title,
+  .hero-title-singleline {
+    text-align: center !important;
+    font-size: 1.9rem !important;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  /* TEXTO */
+  .hero-text,
+  .hero-subtitle {
+    text-align: left;
+    font-size: 0.95rem;
+  }
+
+  /* BOTONES */
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* GRIDS */
+  .news-grid,
+  .exec-grid {
+    grid-template-columns: 1fr;
+  }
+/* ===== MENÚ HAMBURGUESA ===== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Menú desplegable móvil */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  background: #c1001e;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.mobile-menu a {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+ 
+ /* ===== ESPACIADO SECCIONES EN MÓVIL ===== */
+@media (max-width: 768px) {
+
+  /* Separar hero / carrusel de la actualidad */
+  #actualidad {
+    margin-top: 40px !important;
+    padding-top: 30px !important;
+  }
+
+  /* Bajar el título de Actualidad */
+  #actualidad h2,
+  #actualidad .section-title {
+    margin-top: 20px !important;
+  }
+
+  /* Dar aire entre tarjetas */
+  .news-grid {
+    margin-top: 20px !important;
+    gap: 22px !important;
+  }
+
+  /* Evitar solapes raros de títulos */
+  h2 {
+    line-height: 1.25;
+  }
+
+}
+@media (max-width: 768px) {
+  /* Caja del carrusel */
+  #carrusel,
+  .carousel,
+  .slider {
+    background: #ffffff !important;
+    border-radius: 18px;
+    padding: 16px;
+    margin: 20px auto;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  }
+
+  /* Slides */
+  .slide {
+    background: transparent;
+  }
+
+}
   /* Ocultar texto del logo */
   .logo-text-main,
   .logo-text-sub {
@@ -881,51 +1144,32 @@
     display: none;
   }
 
-  /* ===== MENÚ HAMBURGUESA ===== */
+  /* Mostrar hamburguesa */
   .hamburger {
     display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    margin-top: 6px;
+  }
+  /* ===== ARREGLO REAL CARRUSEL + CONTENIDO EN MÓVIL ===== */
+@media (max-width: 768px) {
+
+  /* El carrusel ocupa su espacio real */
+  #carrusel {
+    margin-bottom: 40px !important;
   }
 
-  /* ===== HERO ===== */
+  /* El bloque siguiente baja correctamente */
+  #inicio {
+    margin-top: 0 !important;
+  }
+
+  /* Evitar que el hero se suba */
+  .hero,
   .hero-card {
     margin-top: 0 !important;
-    padding: 22px 18px;
-    min-height: auto;
+    position: relative !important;
   }
 
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
 
-  .hero h1 {
-    text-align: center;
-    font-size: 1.9rem;
-  }
-
-  /* ===== CARRUSEL ===== */
-  #carrusel {
-    margin-bottom: 40px;
-  }
-
-  /* ===== ACTUALIDAD ===== */
-  #actualidad {
-    margin-top: 40px;
-  }
-
-  .news-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-  
 }
-</style>
 </head>
 <body>
   <header>
