@@ -1087,12 +1087,35 @@
   font-size: 1.1rem;
   font-weight: 600;
 }
-
-/* ===== SOLO MÓVIL ===== */
-@media (max-width: 768px) {
-/* ===== ARREGLO CARRUSEL EN MÓVIL ===== */
+ 
+ /* ===== ESPACIADO SECCIONES EN MÓVIL ===== */
 @media (max-width: 768px) {
 
+  /* Separar hero / carrusel de la actualidad */
+  #actualidad {
+    margin-top: 40px !important;
+    padding-top: 30px !important;
+  }
+
+  /* Bajar el título de Actualidad */
+  #actualidad h2,
+  #actualidad .section-title {
+    margin-top: 20px !important;
+  }
+
+  /* Dar aire entre tarjetas */
+  .news-grid {
+    margin-top: 20px !important;
+    gap: 22px !important;
+  }
+
+  /* Evitar solapes raros de títulos */
+  h2 {
+    line-height: 1.25;
+  }
+
+}
+@media (max-width: 768px) {
   /* Caja del carrusel */
   #carrusel,
   .carousel,
