@@ -1040,7 +1040,15 @@ header * { color:white !important; }
 @media(max-width:600px){
   .castro-right{grid-template-columns:1fr}
 }
+/* ===============================
+   MENÚ MÓVIL OCULTO EN DESKTOP
+   =============================== */
 
+.sidebar,
+.menu-mobile,
+.mobile-menu {
+  display: none !important;
+}
 /* =========================
    STYLE #5 (Estatutos extra)
    ========================= */
@@ -1248,6 +1256,15 @@ header * { color:white !important; }
 
 #actualidad {
   margin-top: 0 !important;
+}
+  /* ===============================
+   MENÚ MÓVIL ACTIVO EN MÓVIL
+   =============================== */
+
+.sidebar,
+.menu-mobile,
+.mobile-menu {
+  display: block !important;
 }
 }
 </style>
