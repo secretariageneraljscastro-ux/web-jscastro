@@ -1293,12 +1293,31 @@ header * { color:white !important; }
   margin-top: 0 !important;
 }
   /* ===============================
-   HERO – TEXTO PERFECTAMENTE CENTRADO EN MÓVIL
+   HERO – CENTRADO LIMPIO EN MÓVIL
    =============================== */
 @media (max-width: 600px) {
 
+  .hero {
+    padding-top: 0 !important;
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none !important;
+  }
+
   .hero-card {
+    margin-top: 0 !important;
+    padding: 24px 18px !important;
+    min-height: auto !important;
     text-align: center !important;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    align-items: center !important;
+    justify-items: center !important;
   }
 
   .hero h1,
@@ -1308,33 +1327,17 @@ header * { color:white !important; }
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
-  }
-
-  .hero-inner {
-    align-items: center !important;
-    justify-items: center !important;
+    max-width: 95%;
   }
 
   .hero-buttons {
     justify-content: center !important;
   }
 
-  .hero-text,
-  .hero-subtitle,
-  .hero-note {
-    max-width: 95%;
+  .hero-photos {
+    display: none !important;
   }
-@media (max-width: 600px) {
-
-  /* ANULA el desplazamiento de desktop */
-  .hero-card {
-    margin-top: 0 !important;
-  }
-
-  /* Ajuste fino para que quede perfecto bajo el header */
-  .hero {
-    padding-top: 0 !important;
-  }
+}
 }
 </style>
 </head>
