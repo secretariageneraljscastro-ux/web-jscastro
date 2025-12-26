@@ -1170,20 +1170,55 @@ header * { color:white !important; }
   .menu-links {
     display: none !important;
   }
+
+  .menu-links.active {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .menu-toggle {
+    display: block !important;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
 }
    /* ===============================
    HERO CENTRADO EN MÓVIL
    =============================== */
 @media (max-width: 600px) {
 
-  /* Eliminar completamente la tarjeta */
   .hero-card {
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    background: rgba(255,255,255,0.92) !important;
+    box-shadow: 0 14px 32px rgba(0,0,0,0.15) !important;
+    border: 1px solid #ffd3db !important;
+    padding: 24px 18px !important;
+    margin: 0 auto !important;
+    border-radius: 20px !important;
     min-height: auto !important;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 18px;
+  }
+
+  .hero h1,
+  .hero-subtitle,
+  .hero-text,
+  .hero-note {
+    text-align: center !important;
+  }
+
+  .hero-buttons {
+    justify-content: center !important;
+  }
+
+  .hero-photos {
+    display: none;
   }
 
   /* Hero sin desplazamientos */
@@ -1284,7 +1319,7 @@ header * { color:white !important; }
             </div>
           </div>
         </a>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <div class="menu-toggle">☰</div>
         <div class="menu-inline">
           <div class="menu-links">
             <a href="#inicio">Inicio</a>
@@ -2077,10 +2112,12 @@ show(0);
     </script>
   </footer>
   <script>
-function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-}
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu-links');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
 </script>
 </body>
 </html>
