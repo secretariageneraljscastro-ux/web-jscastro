@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +7,7 @@
   <title>Juventudes Socialistas de Castro-Urdiales · Perfil · Alba Machado</title>
   <style>
     :root {
-     --rojo: #e53935;
+      --rojo: #e53935;
       --rojo-oscuro: #b71c1c;
       --rojo-suave: #ffebee;
       --rojo-vivo: #ff5252;
@@ -21,15 +22,15 @@
       padding: 0;
     }
 
-    body {
+   body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.5;
+      line-height: 1.6;
       color: var(--texto);
       background:
-        radial-gradient(circle at top left, #ffe5e9 0, #ffffff 45%, #ffe5e9 100%);
+        radial-gradient(circle at top left, #ffe5e9 0, #ffffff 40%, #ffe5e9 100%);
+      background-attachment: fixed;
       min-height: 100vh;
     }
-
     a {
       text-decoration: none;
       color: inherit;
@@ -47,7 +48,7 @@
     }
 
     /* CABECERA */
-   header { background:#cc0000 !important; padding:40px 0;
+    header { background:#cc0000 !important; padding:40px 0;
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
       position: sticky;
       top: 0;
@@ -56,6 +57,7 @@
       backdrop-filter: blur(10px);
       border-bottom: 1px solid #ffccd2;
     }
+
 
     .nav {
       display: flex;
@@ -122,7 +124,7 @@
       font-size: 0.84rem;
     }
 
-    .menu-links a:hover {
+   .menu-links a:hover {
       background: #fff;
       color: var(--rojo-oscuro);
       transform: translateY(-1px);
@@ -247,7 +249,8 @@
       .menu-links {
         justify-content: center;
       }
-    }
+    } 
+
 /* circular logo */
 .logo-img { border-radius: 50% !important; height:120px !important; width:120px !important; object-fit:cover; }
  
@@ -263,11 +266,226 @@ header .logo-text-main * {
     color: #d33 !important;      /* rojo */
     font-weight: 700 !important; /* negrita */
 }
+    
+ @media (max-width: 600px) {
 
-  </style>
+  /* Ocultar textos del logo (solo imagen) */
+  .logo-text-main,
+  .logo-text-sub {
+    display: none !important;
+  }
+
+  /* Centrar logo */
+  .logo-wrap {
+    justify-content: center !important;
+    width: 100%;
+  }
+
+  /* Header en columna */
+  .nav {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  /* Hamburguesa visible y centrada */
+  .hamburger,
+  .menu-toggle,
+  .nav-toggle,
+  .mobile-menu-toggle {
+    display: block !important;
+    margin: 0 auto;
+  }
+
+  /* Menú normal NO visible en móvil */
+  .menu-links {
+    display: none !important;
+  }
+
+  .menu-links.active {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+.menu-toggle {
+  display: block !important;
+}
+}
+   /* ===============================
+   HERO CENTRADO EN MÓVIL
+   =============================== */
+@media (max-width: 600px) {
+
+  .hero-card {
+    background: rgba(255,255,255,0.92) !important;
+    box-shadow: 0 14px 32px rgba(0,0,0,0.15) !important;
+    border: 1px solid #ffd3db !important;
+    padding: 24px 18px !important;
+    margin: 0 auto !important;
+    border-radius: 20px !important;
+    min-height: auto !important;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 18px;
+  }
+
+  .hero h1,
+  .hero-subtitle,
+  .hero-text,
+  .hero-note {
+    text-align: center !important;
+  }
+
+  .hero-buttons {
+    justify-content: center !important;
+  }
+
+  .hero-photos {
+    display: none;
+  }
+
+  /* Hero sin desplazamientos */
+  .hero {
+    padding-top: 10px !important;
+  }
+
+  /* Contenido en columna */
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 20px;
+  }
+
+  /* Título centrado */
+  .hero h1 {
+    text-align: center !important;
+  }
+
+  /* Texto centrado */
+  .hero-subtitle,
+  .hero-text,
+  .hero-note {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Botones centrados */
+  .hero-buttons {
+    justify-content: center !important;
+  }
+
+  /* Ocultar columna de fotos si molesta */
+  .hero-photos {
+    display: none;
+  }
+  /* ===============================
+   FIX CARRUSEL MÓVIL – EVITAR SOLAPES
+   =============================== */
+
+/* El contenedor del carrusel sí ocupa altura */
+.castro-container {
+  position: relative !important;
+  min-height: auto !important;
+}
+
+/* Cada slide vuelve al flujo normal */
+.castro-slide {
+  position: relative !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  display: block !important;
+}
+
+/* Solo se muestra la slide activa */
+.castro-slide:not(.active) {
+  display: none !important;
+}
+
+/* Evitar márgenes raros */
+.castro-wrapper {
+  margin-top: 0 !important;
+}
+
+/* Separación real con la siguiente sección */
+#castro-visual {
+  padding-bottom: 40px !important;
+}
+
+#actualidad {
+  margin-top: 0 !important;
+}
+  
+  /* ===============================
+   HERO – CENTRADO LIMPIO EN MÓVIL
+   =============================== */
+
+  .hero {
+    padding-top: 0 !important;
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none !important;
+  }
+
+  .hero-card {
+    margin-top: 0 !important;
+    padding: 24px 18px !important;
+    min-height: auto !important;
+    text-align: center !important;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    align-items: center !important;
+    justify-items: center !important;
+  }
+
+  .hero h1,
+  .hero-subtitle,
+  .hero-text,
+  .hero-note {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 95%;
+  }
+
+  .hero-buttons {
+    justify-content: center !important;
+  }
+
+  .hero-photos {
+    display: none !important;
+  }
+}
+    /* ===============================
+   MENÚ MÓVIL OCULTO EN DESKTOP
+   =============================== */
+
+.sidebar,
+.menu-mobile,
+.mobile-menu {
+  display: none !important;
+}
+    .menu-links {
+  position: relative;
+  z-index: 9999;
+}
+.menu-links a {
+  pointer-events: auto;
+}
+</style>
 </head>
 <body>
-  <header>
+<header>
     <div class="container">
       <nav class="nav">
         <a href="#inicio" class="logo-wrap">
@@ -282,25 +500,17 @@ header .logo-text-main * {
           </div>
         </a>
         <div class="menu-toggle">☰</div>
-        <div class="menu-inline">
-          <div class="menu-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#actualidad">Actualidad</a>
-            <a href="#ejecutiva">Ejecutiva local</a>
-            <a href="#ficha-acceso">Ficha de acceso</a>
-            <a href="#estatutos">Estatutos</a>
-            <a href="#contacto">Contacto</a>
-          </div>
-        </div>
-      </nav>
-      <div class="mobile-menu" id="mobileMenu">
-  <a href="#inicio" onclick="toggleMenu()">Inicio</a>
-  <a href="#actualidad" onclick="toggleMenu()">Actualidad</a>
-  <a href="#ejecutiva" onclick="toggleMenu()">Ejecutiva local</a>
-  <a href="#ficha-acceso" onclick="toggleMenu()">Ficha de acceso</a>
-  <a href="#estatutos" onclick="toggleMenu()">Estatutos</a>
-  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+
+<div class="menu-links">
+  <a href="index.html#inicio">Inicio</a>
+  <a href="index.html#actualidad">Actualidad</a>
+  <a href="index.html#ejecutiva">Ejecutiva local</a>
+  <a href="index.html#ficha-acceso">Ficha de acceso</a>
+  <a href="index.html#estatutos">Estatutos</a>
+  <a href="index.html#contacto">Contacto</a>
 </div>
+      </nav>
+      
     </div>
   </header>
   <main>
