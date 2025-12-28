@@ -1334,44 +1334,46 @@ header * { color:white !important; }
   .hero-buttons {
     justify-content: center !important;
   }
-/* === CENTRAR TEXTO EN LOS CUBÍCULOS === */
-.card {
-  text-align: center;
-  padding: 20px 16px;
-  margin: 0 auto;
-  max-width: 100%;
+  .hero-photos {
+    display: none !important;
+  }
+}
+  /* ===============================
+   FIX DEFINITIVO TEXTO HERO / CUBÍCULOS
+   =============================== */
+
+/* Centrar todo el texto del bloque principal */
+.hero-card,
+.hero-card * {
+  text-align: center !important;
 }
 
-/* TÍTULOS */
-.card h1,
-.card h2,
-.card h3 {
-  text-align: center;
-  margin-bottom: 12px;
+/* Forzar centrado de títulos */
+.hero h1,
+.hero h2,
+.hero h3 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-/* TEXTO */
-.card p {
-  text-align: center;
-  margin: 0 auto 12px;
+/* Forzar centrado de párrafos */
+.hero p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   max-width: 95%;
 }
 
-/* RECUADRO ROSA INTERIOR */
-.card .recuadro {
-  text-align: center;
-  margin: 16px auto;
-  padding: 14px 16px;
+/* Recuadro rosa */
+.hero-note {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
-
-/* AJUSTE MÓVIL */
-@media (max-width: 600px) {
-  .card {
-    padding: 18px 14px;
-  }
-}
-  .hero-photos {
-    display: none !important;
+  @media (max-width: 600px) {
+  .hero-inner {
+    justify-items: center !important;
   }
 }
 }
