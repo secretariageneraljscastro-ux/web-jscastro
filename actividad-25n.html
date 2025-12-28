@@ -308,10 +308,15 @@ header .logo-text-main * {
     flex-direction: column;
     gap: 12px;
     margin-top: 12px;
+    position: absolute;
+    top: 100%
+    left: 0;
+    right: 0; 
+    z-index: 9999;
   }
 
   .menu-toggle {
-    display: block !important;
+    display: none !important;
     font-size: 28px;
     cursor: pointer;
     color: white;
@@ -480,7 +485,7 @@ header .logo-text-main * {
   display: none !important;
 }
     .menu-links {
-  position: relative;
+  position: absolute;
   z-index: 9999;
 }
 .menu-links a {
