@@ -1,5 +1,4 @@
 
-}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -308,11 +307,6 @@ header .logo-text-main * {
     flex-direction: column;
     gap: 12px;
     margin-top: 12px;
-    position: absolute;
-    top: 100%
-    left: 0;
-    right: 0; 
-    z-index: 9999;
   }
 
   .menu-toggle {
@@ -485,7 +479,7 @@ header .logo-text-main * {
   display: none !important;
 }
     .menu-links {
-  position: absolute;
+  position: relative;
   z-index: 9999;
 }
 .menu-links a {
@@ -520,14 +514,7 @@ header .logo-text-main * {
           </div>
         </div>
       </nav>
-      <div class="mobile-menu" id="mobileMenu">
-  <a href="#inicio" onclick="toggleMenu()">Inicio</a>
-  <a href="#actualidad" onclick="toggleMenu()">Actualidad</a>
-  <a href="#ejecutiva" onclick="toggleMenu()">Ejecutiva local</a>
-  <a href="#ficha-acceso" onclick="toggleMenu()">Ficha de acceso</a>
-  <a href="#estatutos" onclick="toggleMenu()">Estatutos</a>
-  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
-</div>
+      
     </div>
   </header>
 
