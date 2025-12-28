@@ -1334,7 +1334,42 @@ header * { color:white !important; }
   .hero-buttons {
     justify-content: center !important;
   }
+/* === CENTRAR TEXTO EN LOS CUBÍCULOS === */
+.card {
+  text-align: center;
+  padding: 20px 16px;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
+/* TÍTULOS */
+.card h1,
+.card h2,
+.card h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* TEXTO */
+.card p {
+  text-align: center;
+  margin: 0 auto 12px;
+  max-width: 95%;
+}
+
+/* RECUADRO ROSA INTERIOR */
+.card .recuadro {
+  text-align: center;
+  margin: 16px auto;
+  padding: 14px 16px;
+}
+
+/* AJUSTE MÓVIL */
+@media (max-width: 600px) {
+  .card {
+    padding: 18px 14px;
+  }
+}
   .hero-photos {
     display: none !important;
   }
