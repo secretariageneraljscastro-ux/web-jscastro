@@ -460,9 +460,27 @@ Su esfuerzo apuesta  por una política cercana, honesta y comprometida con la ju
         </div>
       </div>
     </div>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* Año automático (solo si existe) */
+  const year = document.getElementById("year");
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+  /* Menú hamburguesa */
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu-links");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  }
+
+});
+</script>
   </footer>
 </body>
 </html>
