@@ -1243,7 +1243,7 @@ header * { color:white !important; }
   .hero-subtitle,
   .hero-text,
   .hero-note {
-    text-align: justify !important;
+    text-align: center !important;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1355,16 +1355,6 @@ header * { color:white !important; }
   }
 }
    
-
-/* Quitar el nowrap solo en móvil */
-@media (max-width: 600px) {
-  .hero-title .linea1,
-  .hero-title .linea2 {
-    white-space: normal !important;
-    display: block;
-    text-align: justify;
-  }
-}
    /* ===============================
    HERO – AJUSTE FINAL SOLO MÓVIL
    =============================== */
@@ -1395,7 +1385,7 @@ header * { color:white !important; }
   /* TÍTULOS: centrados */
   .hero h1,
   .hero h2 {
-    text-align: justify !important;
+    text-align: center !important;
   }
 
   /* TEXTO: justificado y estable */
@@ -1428,10 +1418,11 @@ header * { color:white !important; }
   }
 
   /* Permitir salto de línea en título */
-  .hero-title .linea1,
+ .hero-title .linea1,
   .hero-title .linea2 {
+    display: block !important;
     white-space: normal !important;
-    display: block;
+    text-align: center;
   }
 }
 </style>
