@@ -1375,6 +1375,17 @@ header * { color:white !important; }
     justify-items: center !important;
   }
 }
+   
+
+/* Quitar el nowrap solo en móvil */
+@media (max-width: 600px) {
+  .hero-title .linea1,
+  .hero-title .linea2 {
+    white-space: normal !important;
+    display: block;
+    text-align: center;
+  }
+}
 </style>
 </head>
 <body>
