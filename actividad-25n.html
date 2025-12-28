@@ -469,7 +469,8 @@ header .logo-text-main * {
   .hero-photos {
     display: none !important;
   }
-/* ===============================
+}
+    /* ===============================
    MENÚ MÓVIL OCULTO EN DESKTOP
    =============================== */
 
@@ -478,6 +479,12 @@ header .logo-text-main * {
 .mobile-menu {
   display: none !important;
 }
+    .menu-links {
+  position: relative;
+  z-index: 9999;
+}
+.menu-links a {
+  pointer-events: auto;
 }
 </style>
 </head>
