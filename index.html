@@ -1290,7 +1290,41 @@ header * { color:white !important; }
   #actualidad {
     margin-top: 40px !important;
   }
+}
+  /* =====================================================
+   MENÚ RESPONSIVE DEFINITIVO
+   ===================================================== */
 
+/* ===== DESKTOP ===== */
+@media (min-width: 601px) {
+  .menu-toggle,
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .menu-inline {
+    display: block !important;
+  }
+}
+
+/* ===== MÓVIL ===== */
+@media (max-width: 600px) {
+  .menu-inline {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block !important;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
  </style>
