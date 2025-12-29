@@ -1347,8 +1347,43 @@ header * { color:white !important; }
     justify-items: center !important;
   }
 
+
+  /* Ajuste fino del grid del carrusel en móvil */
+  .castro-right {
+    justify-items: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Evitar que la segunda fila se vaya a la derecha */
+  .castro-right > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Un poco de aire lateral general */
+  #castro-visual {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
 }
- 
+ /* ===============================
+   FIX DEFINITIVO MENÚ DESKTOP
+   =============================== */
+@media (min-width: 901px) {
+
+  /* Ocultar menú móvil en escritorio */
+  .menu-links,
+  .menu-links.active,
+  .mobile-menu,
+  .menu-mobile,
+  .menu-toggle,
+  .hamburger {
+    display: none !important;
+  }
+
+}
  </style>
 </head>
 <body>
