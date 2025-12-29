@@ -1267,6 +1267,36 @@ header * { color:white !important; }
     display: none !important;
   }
 }
+   /* ===============================
+   HERO – AJUSTE FINO SOLO MÓVIL
+   =============================== */
+@media (max-width: 600px) {
+
+  /* Reducir espacio bajo el título */
+  .hero-title {
+    margin-bottom: 8px !important;
+    line-height: 1.05;
+  }
+
+  /* Reducir espacio superior del primer texto */
+  .hero-subtitle {
+    margin-top: 4px !important;
+  }
+
+  /* Texto alineado a la izquierda en móvil */
+  .hero-text-left,
+  .hero-subtitle,
+  .hero-text,
+  .hero-note {
+    text-align: left !important;
+  }
+
+  /* Evitar que el texto se vea demasiado ancho */
+  .hero-text-left {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
  </style>
 </head>
 <body>
