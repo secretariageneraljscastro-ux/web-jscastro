@@ -1176,13 +1176,6 @@ header * { color:white !important; }
     display: none !important;
   }
 
-  .menu-links.active {
-    display: flex !important;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 12px;
-  }
-
   .menu-toggle {
     display: block !important;
     font-size: 28px;
@@ -1296,6 +1289,32 @@ header * { color:white !important; }
   /* Separación clara antes de Actualidad */
   #actualidad {
     margin-top: 40px !important;
+  }
+/* ❌ Ocultar SIEMPRE los enlaces */
+  .menu-inline,
+  .menu-links {
+    display: none !important;
+  }
+
+  /* ✅ Mostrar solo el icono hamburguesa */
+  .menu-toggle,
+  .hamburger,
+  .nav-toggle,
+  .mobile-menu-toggle {
+    display: block !important;
+    font-size: 28px;
+    color: white;
+    margin: 0 auto;
+  }
+
+  /* Header más compacto */
+  header {
+    padding: 20px 0 !important;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 8px;
   }
 
 }
