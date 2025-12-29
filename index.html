@@ -1290,37 +1290,12 @@ header * { color:white !important; }
   #actualidad {
     margin-top: 40px !important;
   }
-
-  /* OCULTAR SOLO EL TEXTO DEL MENÚ */
-  .menu-links,
-  .menu-links a,
-  .nav-links,
-  .nav-links a,
-  .menu-inline,
-  .menu-inline a {
+  header .menu-inline,
+  header .menu-links {
     display: none !important;
-  }
-
-  /* ASEGURAR QUE EL LOGO SE VE */
-  .logo,
-  .logo a,
-  .logo img,
-  .logo-wrap,
-  .logo-wrap img {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-
-  /* MOSTRAR HAMBURGUESA */
-  .menu-toggle,
-  .hamburger,
-  .nav-toggle,
-  .mobile-menu-toggle {
-    display: block !important;
-    font-size: 28px;
-    color: white;
-    margin: 0 auto;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
   }
 
 }
