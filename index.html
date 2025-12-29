@@ -1291,24 +1291,7 @@ header * { color:white !important; }
   .hero-title br {
     display: none;
   }
-  /* El carrusel SÍ ocupa espacio */
-  .castro-container {
-    position: relative !important;
-    min-height: auto !important;
-  }
-
-  /* Las slides vuelven al flujo */
-  .castro-slide {
-    position: relative !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    display: block !important;
-  }
-
-  /* Solo se muestra la activa */
-  .castro-slide:not(.active) {
-    display: none !important;
-  }
+  
   /* Aire lateral general en móvil */
   .container,
   .hero-card,
@@ -1367,27 +1350,6 @@ header * { color:white !important; }
     padding-left: 14px !important;
     padding-right: 14px !important;
   }
-  /* El contenedor del carrusel SÍ ocupa espacio */
-  #castro-visual,
-  .castro-container {
-    position: relative !important;
-    min-height: auto !important;
-    height: auto !important;
-  }
-
-  /* Las slides vuelven al flujo normal */
-  .castro-slide {
-    position: relative !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    display: block !important;
-    margin-bottom: 30px;
-  }
-
-  /* Solo se muestra la activa */
-  .castro-slide:not(.active) {
-    display: none !important;
-  }
   .castro-wrapper,
   .castro-left,
   .castro-right {
@@ -1395,6 +1357,61 @@ header * { color:white !important; }
     margin-right: auto !important;
     max-width: 100% !important;
     box-sizing: border-box;
+  }
+
+  .castro-right > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  /* ===== HERO ===== */
+  .hero-title {
+    line-height: 1.1 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-title .linea1,
+  .hero-title .linea2 {
+    display: block;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .hero-title br {
+    display: none;
+  }
+
+  /* ===== CARRUSEL ===== */
+  #castro-visual,
+  .castro-container {
+    position: relative !important;
+    min-height: auto !important;
+  }
+
+  .castro-slide {
+    position: relative !important;
+    display: block !important;
+    opacity: 1 !important;
+    margin-bottom: 32px;
+  }
+
+  .castro-slide:not(.active) {
+    display: none !important;
+  }
+
+  /* ===== MÁRGENES ===== */
+  .container,
+  .hero-card,
+  .castro-wrapper {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box;
+  }
+
+  .castro-left,
+  .castro-right {
+    max-width: 100% !important;
+    margin: 0 auto !important;
   }
 
   .castro-right > * {
