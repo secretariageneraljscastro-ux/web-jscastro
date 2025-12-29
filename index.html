@@ -1267,37 +1267,27 @@ header * { color:white !important; }
     display: none !important;
   }
 }
-   /* ===============================
-   HERO – MÓVIL REAL (FUNCIONA SEGURO)
+  /* ===============================
+   HERO – TÍTULO COMPACTO SOLO MÓVIL
    =============================== */
 @media (max-width: 768px) {
 
-  /* Quitar espacio excesivo bajo el título */
   .hero-title {
-    margin-bottom: 6px !important;
-    padding-bottom: 0 !important;
-    line-height: 1.05 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 10px !important;
   }
 
-  /* Pegar el primer texto al título */
-  .hero-subtitle {
-    margin-top: 4px !important;
+  .hero-title .linea1,
+  .hero-title .linea2 {
+    display: block;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* TODO el texto alineado a la izquierda */
-  .hero-text-left,
-  .hero-subtitle,
-  .hero-text,
-  .hero-note {
-    text-align: left !important;
-  }
-
-  /* Evitar márgenes automáticos heredados */
-  .hero-subtitle,
-  .hero-text,
-  .hero-note {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  /* Quitar el salto artificial entre líneas */
+  .hero-title br {
+    display: none;
   }
 }
  
