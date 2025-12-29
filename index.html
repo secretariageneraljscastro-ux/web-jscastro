@@ -1290,23 +1290,29 @@ header * { color:white !important; }
   #actualidad {
     margin-top: 40px !important;
   }
-/* =====================================
-   OCULTAR TEXTO DEL MENÚ EN MÓVIL (REAL)
-   ===================================== */
 
-
-  /* Ocultar TODOS los enlaces del header */
-  header a,
-  header nav a,
-  header nav ul,
-  header nav li,
-  .nav a,
-  .nav ul,
-  .nav li {
+  /* OCULTAR SOLO EL TEXTO DEL MENÚ */
+  .menu-links,
+  .menu-links a,
+  .nav-links,
+  .nav-links a,
+  .menu-inline,
+  .menu-inline a {
     display: none !important;
   }
 
-  /* Mostrar solo hamburguesa */
+  /* ASEGURAR QUE EL LOGO SE VE */
+  .logo,
+  .logo a,
+  .logo img,
+  .logo-wrap,
+  .logo-wrap img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* MOSTRAR HAMBURGUESA */
   .menu-toggle,
   .hamburger,
   .nav-toggle,
@@ -1316,6 +1322,7 @@ header * { color:white !important; }
     color: white;
     margin: 0 auto;
   }
+
 }
 
  </style>
