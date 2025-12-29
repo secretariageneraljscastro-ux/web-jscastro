@@ -1418,73 +1418,10 @@ header * { color:white !important; }
     margin-left: auto !important;
     margin-right: auto !important;
   }
-}
-  /* ======================================
-   OVERRIDE FINAL – MENÚ Y CARRUSEL
-   (NO TOCAR NADA MÁS)
-   ====================================== */
-
-/* ===== MENÚ ===== */
-
-/* Escritorio: solo menú horizontal */
-@media (min-width: 901px) {
-  .menu-toggle,
-  .hamburger,
-  .sidebar,
-  .menu-mobile,
-  .mobile-menu {
-    display: none !important;
-  }
-
-  .menu-inline,
-  .menu-links {
-    display: flex !important;
-  }
-}
-
-/* Móvil: solo hamburguesa */
-@media (max-width: 900px) {
-  .menu-inline,
-  .menu-links {
-    display: none !important;
-  }
-
-  .menu-toggle,
-  .hamburger {
-    display: block !important;
-  }
-}
-
-/* ===== CARRUSEL ===== */
-
-/* Desktop mantiene absolute */
-@media (min-width: 901px) {
-  .castro-container {
+    .castro-slide {
     position: relative !important;
-    min-height: 420px;
-  }
-
-  .castro-slide {
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .castro-slide.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-}
-
-/* Móvil: carrusel en flujo normal */
-@media (max-width: 900px) {
-  .castro-slide {
-    position: relative !important;
-    display: block !important;
     opacity: 1 !important;
+    display: block !important;
     margin-bottom: 32px;
   }
 
@@ -1492,15 +1429,15 @@ header * { color:white !important; }
     display: none !important;
   }
 
-  .castro-wrapper {
-    padding: 0 16px !important;
-    box-sizing: border-box;
+  .castro-container {
+    min-height: auto !important;
   }
 
-  .castro-left,
-  .castro-right {
-    max-width: 100% !important;
-    margin: 0 auto !important;
+}
+/* 🔒 FIX REAL MENÚ DESKTOP */
+@media (min-width: 901px) {
+  .menu-links.active {
+    display: none !important;
   }
 }
  </style>
