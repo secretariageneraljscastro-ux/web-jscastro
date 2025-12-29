@@ -1367,21 +1367,42 @@ header * { color:white !important; }
     padding-left: 14px !important;
     padding-right: 14px !important;
   }
-}
- /* ===============================
-   FIX DEFINITIVO MENÚ DESKTOP
-   =============================== */
-@media (min-width: 901px) {
+  /* El contenedor del carrusel SÍ ocupa espacio */
+  #castro-visual,
+  .castro-container {
+    position: relative !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
 
-  /* Ocultar menú móvil en escritorio */
-  .menu-links,
-  .menu-links.active,
-  .mobile-menu,
-  .menu-mobile,
-  .menu-toggle,
-  .hamburger {
+  /* Las slides vuelven al flujo normal */
+  .castro-slide {
+    position: relative !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    display: block !important;
+    margin-bottom: 30px;
+  }
+
+  /* Solo se muestra la activa */
+  .castro-slide:not(.active) {
     display: none !important;
   }
+  .castro-wrapper,
+  .castro-left,
+  .castro-right {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .castro-right > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+
 
 }
  </style>
