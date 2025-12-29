@@ -2136,6 +2136,33 @@ show(0);
   toggle.addEventListener('click', () => {
     menu.classList.toggle('active');
   });
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (!toggle || !mobileMenu) return;
+
+    toggle.addEventListener('click', () => {
+      if (window.innerWidth <= 600) {
+        mobileMenu.classList.toggle('active');
+      }
+    });
+
+    // Cerrar menú móvil al pulsar un enlace
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Seguridad: cerrar menú móvil al pasar a desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 600) {
+        mobileMenu.classList.remove('active');
+      }
+    });
+  });
+
 </script>
 </body>
 </html>
