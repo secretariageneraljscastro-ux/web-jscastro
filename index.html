@@ -1290,13 +1290,23 @@ header * { color:white !important; }
   #actualidad {
     margin-top: 40px !important;
   }
-/* ❌ Ocultar SIEMPRE los enlaces */
-  .menu-inline,
-  .menu-links {
+/* =====================================
+   OCULTAR TEXTO DEL MENÚ EN MÓVIL (REAL)
+   ===================================== */
+
+
+  /* Ocultar TODOS los enlaces del header */
+  header a,
+  header nav a,
+  header nav ul,
+  header nav li,
+  .nav a,
+  .nav ul,
+  .nav li {
     display: none !important;
   }
 
-  /* ✅ Mostrar solo el icono hamburguesa */
+  /* Mostrar solo hamburguesa */
   .menu-toggle,
   .hamburger,
   .nav-toggle,
@@ -1306,18 +1316,8 @@ header * { color:white !important; }
     color: white;
     margin: 0 auto;
   }
-
-  /* Header más compacto */
-  header {
-    padding: 20px 0 !important;
-  }
-
-  .nav {
-    flex-direction: column;
-    gap: 8px;
-  }
-
 }
+
  </style>
 </head>
 <body>
