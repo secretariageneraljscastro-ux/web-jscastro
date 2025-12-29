@@ -1291,19 +1291,23 @@ header * { color:white !important; }
   .hero-title br {
     display: none;
   }
-  /* Quitar espacio entre header y hero */
-  header {
-    margin-bottom: 0 !important;
-    padding-bottom: 20px !important;
+  /* El carrusel SÍ ocupa espacio */
+  .castro-container {
+    position: relative !important;
+    min-height: auto !important;
   }
 
-  main.hero {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+  /* Las slides vuelven al flujo */
+  .castro-slide {
+    position: relative !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    display: block !important;
   }
 
-  .hero-card {
-    margin-top: 0 !important;
+  /* Solo se muestra la activa */
+  .castro-slide:not(.active) {
+    display: none !important;
   }
 
 }
