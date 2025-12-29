@@ -1270,6 +1270,33 @@ header * { color:white !important; }
   .hero-title br {
     display: none !important;
   }
+/* El contenedor del carrusel SÍ ocupa espacio */
+  #castro-visual,
+  .castro-container {
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Las slides vuelven al flujo normal */
+  .castro-slide {
+    position: relative !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    display: block !important;
+    margin-bottom: 40px !important;
+  }
+
+  /* Solo se muestra la activa */
+  .castro-slide:not(.active) {
+    display: none !important;
+  }
+
+  /* Separación clara antes de Actualidad */
+  #actualidad {
+    margin-top: 40px !important;
+  }
 
 }
  </style>
