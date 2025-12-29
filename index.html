@@ -1190,7 +1190,69 @@ header * { color:white !important; }
     color: white;
   }
 }
+/* ===============================
+   HERO – MÓVIL DEFINITIVO
+   =============================== */
+@media (max-width: 600px) {
 
+  .hero {
+    padding-top: 0 !important;
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none !important;
+  }
+
+  .hero-card {
+    margin-top: 0 !important;
+    padding: 24px 18px !important;
+    min-height: auto !important;
+    text-align: center !important;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    justify-items: center !important;
+  }
+
+  /* TÍTULO */
+  .hero h1 {
+    text-align: center !important;
+  }
+
+  /* TEXTO LEGIBLE */
+  .hero-subtitle,
+  .hero-text {
+    text-align: justify !important;
+    text-align-last: center;
+    max-width: 92%;
+    margin: 0 auto;
+  }
+
+  /* NOTA */
+  .hero-note {
+    text-align: center !important;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center !important;
+  }
+
+  .hero-photos {
+    display: none !important;
+  }
+
+  /* SALTO DE LÍNEA EN TÍTULO */
+  .hero-title .linea1,
+  .hero-title .linea2 {
+    white-space: normal !important;
+    display: block;
+  }
+}
  </style>
 </head>
 <body>
