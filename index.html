@@ -403,7 +403,26 @@ footer {
   letter-spacing: 1px;
   color: #1f1f1f;
 }
+/* ===============================
+   HERO – DESKTOP (IZQ TEXTO / DER FOTO)
+   =============================== */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+}
 
+/* Texto del hero a la izquierda */
+.hero-text,
+.hero-subtitle {
+  text-align: left;
+}
+
+/* Título centrado como diseño original */
+.hero-title {
+  text-align: center;
+}
 /* ACTUALIDAD */
 #actualidad {
   background: linear-gradient(to bottom, #ffffffdd, #ffeef1dd);
