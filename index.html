@@ -1326,19 +1326,25 @@ header * { color:white !important; }
     padding-left: 6px;
     padding-right: 6px;
   }
-  /* Resetear alineación de secciones posteriores */
-  #actualidad,
-  #actualidad .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+/* Ajuste general del carrusel en móvil */
+  .castro-wrapper {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    box-sizing: border-box;
   }
 
-  /* Centrar tarjetas de actualidad */
-  #actualidad .card,
-  #actualidad .post,
-  #actualidad article {
-    margin-left: auto;
-    margin-right: auto;
+  /* Forzar columnas a no salirse */
+  .castro-left,
+  .castro-right {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+  }
+
+  /* Evitar empujes laterales raros */
+  .castro-right {
+    justify-items: center !important;
   }
 
 }
