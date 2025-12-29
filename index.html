@@ -1050,8 +1050,10 @@ header * { color:white !important; }
   .castro-right{grid-template-columns:1fr 1fr}
 }
 @media(max-width:600px){
-  .castro-right{grid-template-columns:1fr}
-}
+    .castro-right{
+    grid-template-columns:1fr 1fr !important;
+  }
+
 /* ===============================
    MENÚ MÓVIL OCULTO EN DESKTOP
    =============================== */
@@ -1289,6 +1291,21 @@ header * { color:white !important; }
   .hero-title br {
     display: none;
   }
+  /* Quitar espacio entre header y hero */
+  header {
+    margin-bottom: 0 !important;
+    padding-bottom: 20px !important;
+  }
+
+  main.hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .hero-card {
+    margin-top: 0 !important;
+  }
+
 }
  
  </style>
