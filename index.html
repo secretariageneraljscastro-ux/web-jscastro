@@ -2111,39 +2111,34 @@ show(0);
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </footer>
-  <script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu-links');
+  const mobileMenu = document.getElementById('mobileMenu');
 
+  if (!toggle || !mobileMenu) return;
+
+  // Abrir / cerrar menú móvil
   toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
+    if (window.innerWidth <= 600) {
+      mobileMenu.classList.toggle('active');
+    }
   });
-    document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.menu-toggle');
-    const mobileMenu = document.getElementById('mobileMenu');
 
-    if (!toggle || !mobileMenu) return;
-
-    toggle.addEventListener('click', () => {
-      if (window.innerWidth <= 600) {
-        mobileMenu.classList.toggle('active');
-      }
-    });
-
-    // Cerrar menú móvil al pulsar un enlace
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-      });
-    });
-
-    // Seguridad: cerrar menú móvil al pasar a desktop
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 600) {
-        mobileMenu.classList.remove('active');
-      }
+  // Cerrar menú al pulsar un enlace
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
     });
   });
+
+  // Seguridad: cerrar menú si pasamos a escritorio
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 600) {
+      mobileMenu.classList.remove('active');
+    }
+  });
+});
 
 </script>
 </body>
