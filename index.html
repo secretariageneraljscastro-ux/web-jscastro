@@ -1308,8 +1308,14 @@ header * { color:white !important; }
     display: none !important;
   }
 }
-   .estatuto-card::after {
+/* El menú móvil NO debe bloquear clics cuando está cerrado */
+.mobile-menu {
   pointer-events: none;
+}
+
+/* Solo cuando está abierto puede recibir clics */
+.mobile-menu.open {
+  pointer-events: auto;
 }
  </style>
 </head>
