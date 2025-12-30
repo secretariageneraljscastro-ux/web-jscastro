@@ -1326,39 +1326,28 @@ header * { color:white !important; }
     flex-direction: column;
   }
 }
-/* =====================================
-   FIX DEFINITIVO: MENÚ SOLO EN MÓVIL
-   ===================================== */
-
-/* ESCRITORIO */
+/* =========================================
+   ESCRITORIO: OCULTAR MENÚ MÓVIL COMPLETO
+   ========================================= */
 @media (min-width: 901px) {
-  .menu-inline {
-    display: none !important;   /* 🔥 este es el que faltaba */
-  }
 
-  .menu-toggle,
-  .mobile-menu {
-    display: none !important;
-  }
-}
-
-/* MÓVIL */
-@media (max-width: 900px) {
-  .menu-inline {
-    display: none !important;
-  }
-
+  /* Ocultar hamburguesa */
   .menu-toggle {
-    display: block !important;
+    display: none !important;
   }
 
+  /* Ocultar menú móvil */
   .mobile-menu {
-    display: none;
+    display: none !important;
   }
 
-  .mobile-menu.active {
-    display: flex;
-    flex-direction: column;
+  /* Asegurar menú principal visible */
+  .menu-inline {
+    display: flex !important;
+  }
+
+  .menu-links {
+    display: flex !important;
   }
 }
 
