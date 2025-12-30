@@ -1132,15 +1132,6 @@ header * { color:white !important; }
   text-decoration: underline;
 }
    
-/* En escritorio NO se muestra la hamburguesa */
-@media (min-width: 901px) {
-  .hamburger,
-  .menu-toggle,
-  .nav-toggle,
-  .mobile-menu-toggle {
-    display: none !important;
-  }
-}
    @media (max-width: 600px) {
 
   /* Ocultar textos del logo (solo imagen) */
@@ -1160,15 +1151,6 @@ header * { color:white !important; }
     flex-direction: column;
     height: auto;
     gap: 10px;
-  }
-
-  /* Hamburguesa visible y centrada */
-  .hamburger,
-  .menu-toggle,
-  .nav-toggle,
-  .mobile-menu-toggle {
-    display: block !important;
-    margin: 0 auto;
   }
 
   /* Menú normal NO visible en móvil */
@@ -1324,30 +1306,6 @@ header * { color:white !important; }
   .mobile-menu.active {
     display: flex;
     flex-direction: column;
-  }
-}
-/* =========================================
-   ESCRITORIO: OCULTAR MENÚ MÓVIL COMPLETO
-   ========================================= */
-@media (min-width: 901px) {
-
-  /* Ocultar hamburguesa */
-  .menu-toggle {
-    display: none !important;
-  }
-
-  /* Ocultar menú móvil */
-  .mobile-menu {
-    display: none !important;
-  }
-
-  /* Asegurar menú principal visible */
-  .menu-inline {
-    display: flex !important;
-  }
-
-  .menu-links {
-    display: flex !important;
   }
 }
 
