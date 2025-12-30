@@ -1308,7 +1308,16 @@ header * { color:white !important; }
     flex-direction: column;
   }
 }
+/* === FUERZA FINAL DESKTOP === */
+@media (min-width: 601px) {
+  .menu-toggle {
+    display: none !important;
+  }
 
+  .mobile-menu {
+    display: none !important;
+  }
+}
  </style>
 </head>
 <body>
@@ -1326,25 +1335,26 @@ header * { color:white !important; }
             </div>
           </div>
         </a>
-        <div class="menu-toggle">☰</div>
-        <div class="menu-inline">
-          <div class="menu-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#actualidad">Actualidad</a>
-            <a href="#ejecutiva">Ejecutiva local</a>
-            <a href="#ficha-acceso">Ficha de acceso</a>
-            <a href="#estatutos">Estatutos</a>
-            <a href="#contacto">Contacto</a>
-          </div>
-        </div>
-      </nav>
-      <div class="mobile-menu" id="mobileMenu">
-  <a href="#inicio" onclick="toggleMenu()">Inicio</a>
-  <a href="#actualidad" onclick="toggleMenu()">Actualidad</a>
-  <a href="#ejecutiva" onclick="toggleMenu()">Ejecutiva local</a>
-  <a href="#ficha-acceso" onclick="toggleMenu()">Ficha de acceso</a>
-  <a href="#estatutos" onclick="toggleMenu()">Estatutos</a>
-  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+       <div class="menu-toggle">☰</div>
+
+<div class="menu-inline">
+  <div class="menu-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#actualidad">Actualidad</a>
+    <a href="#ejecutiva">Ejecutiva local</a>
+    <a href="#ficha-acceso">Ficha de acceso</a>
+    <a href="#estatutos">Estatutos</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio">Inicio</a>
+  <a href="#actualidad">Actualidad</a>
+  <a href="#ejecutiva">Ejecutiva local</a>
+  <a href="#ficha-acceso">Ficha de acceso</a>
+  <a href="#estatutos">Estatutos</a>
+  <a href="#contacto">Contacto</a>
 </div>
     </div>
   </header>
@@ -2118,7 +2128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!toggle || !mobileMenu) return;
 
-  // Abrir / cerrar menú móvil
+  // Abrir / cerrar menú móvil (SOLO en móvil)
   toggle.addEventListener('click', () => {
     if (window.innerWidth <= 600) {
       mobileMenu.classList.toggle('active');
@@ -2132,14 +2142,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Seguridad: cerrar menú si pasamos a escritorio
+  // Seguridad total: nunca abierto en escritorio
   window.addEventListener('resize', () => {
     if (window.innerWidth > 600) {
       mobileMenu.classList.remove('active');
     }
   });
 });
-
 </script>
 </body>
 </html>
