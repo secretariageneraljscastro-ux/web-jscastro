@@ -2161,17 +2161,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-  document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".btn-estatuto").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const file = btn.getAttribute("data-file");
-      if (file) {
-        window.open(file, "_blank");
-      }
-    });
-  });
-});
 
 </script>
 </body>
