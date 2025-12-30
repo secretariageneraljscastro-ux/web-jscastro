@@ -2151,29 +2151,24 @@ show(0);
     </script>
   </footer>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.menu-toggle');
-  const mobileMenu = document.getElementById('mobileMenu');
+document.addEventListener("DOMContentLoaded", function () {
 
-  if (!toggle || !mobileMenu) return;
+  /* Año automático (solo si existe) */
+  const year = document.getElementById("year");
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
-  toggle.addEventListener('click', () => {
-    if (window.innerWidth <= 900) {
-      mobileMenu.classList.toggle('active');
-    }
-  });
+  /* Menú hamburguesa */
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu-links");
 
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("active");
     });
-  });
+  }
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 900) {
-      mobileMenu.classList.remove('active');
-    }
-  });
 });
 </script>
 </body>
