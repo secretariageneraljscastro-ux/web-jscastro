@@ -1308,14 +1308,24 @@ header * { color:white !important; }
     flex-direction: column;
   }
 }
-/* === FUERZA FINAL DESKTOP === */
-@media (min-width: 601px) {
+/* =====================================================
+   FIX DEFINITIVO: OCULTAR MENÚ MÓVIL EN DESKTOP
+   ===================================================== */
+@media (min-width: 900px) {
+
+  /* Ocultar hamburguesa */
   .menu-toggle {
     display: none !important;
   }
 
+  /* Ocultar menú móvil COMPLETO */
   .mobile-menu {
     display: none !important;
+  }
+
+  /* Asegurar menú de escritorio visible */
+  .menu-inline {
+    display: block !important;
   }
 }
  </style>
