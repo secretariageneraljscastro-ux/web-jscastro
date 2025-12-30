@@ -1272,94 +1272,46 @@ header * { color:white !important; }
   #actualidad {
     margin-top: 40px !important;
   }
-}
-  /* =====================================================
-   MENÚ RESPONSIVE DEFINITIVO
-   ===================================================== */
-
-/* ===== DESKTOP ===== */
-@media (min-width: 601px) {
-  .menu-toggle,
-  .mobile-menu {
-    display: none !important;
-  }
-
-  .menu-inline {
-    display: block !important;
-  }
+}/* MOBILE FIRST */
+.menu-toggle {
+  display: block;
 }
 
-/* ===== MÓVIL ===== */
-@media (max-width: 600px) {
-  .menu-inline {
-    display: none !important;
+.menu-inline {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Activo solo en móvil */
+.mobile-menu.open {
+  display: flex;
+  flex-direction: column;
+}
   }
+
+
+/* DESKTOP */
+@media (min-width: 769px) {
 
   .menu-toggle {
-    display: block !important;
-  }
-
-  .mobile-menu {
     display: none;
   }
 
-  .mobile-menu.active {
-    display: flex;
-    flex-direction: column;
+  .menu-inline {
+    display: block;
   }
-}
-/* =====================================================
-   FIX FINAL HEADER – DESKTOP vs MÓVIL
-   ===================================================== */
 
-/* ===== DESKTOP ===== */
-@media (min-width: 901px) {
-
-  /* Ocultar menú móvil y hamburguesa */
-  .menu-toggle,
   .mobile-menu {
     display: none !important;
-  }
-
-  /* Mostrar solo menú de escritorio */
-  .menu-inline {
-    display: block !important;
-  }
-
-  /* EVITAR texto suelto */
-  .menu-links {
-    display: flex !important;
-  }
-}
-
-/* ===== MÓVIL ===== */
-@media (max-width: 900px) {
-
-  /* Ocultar menú escritorio */
-  .menu-inline {
-    display: none !important;
-  }
-
-  /* Mostrar hamburguesa */
-  .menu-toggle {
-    display: block !important;
-  }
-
-  /* Menú móvil cerrado por defecto */
-  .mobile-menu {
-    display: none !important;
-    flex-direction: column;
-  }
-
-  /* Menú móvil abierto */
-  .mobile-menu.active {
-    display: flex !important;
   }
 }
  </style>
 </head>
 <body>
-<header>
+ <header>
     <div class="container">
       <nav class="nav">
         <a href="#inicio" class="logo-wrap">
@@ -1373,22 +1325,29 @@ header * { color:white !important; }
             </div>
           </div>
         </a>
-        <div class="menu-toggle">☰</div>
+       <div class="menu-toggle">☰</div>
 
-<div class="menu-links">
-  <a href="index.html#inicio">Inicio</a>
-  <a href="index.html#actualidad">Actualidad</a>
-  <a href="index.html#ejecutiva">Ejecutiva local</a>
-  <a href="index.html#ficha-acceso">Ficha de acceso</a>
-  <a href="index.html#estatutos">Estatutos</a>
-  <a href="index.html#contacto">Contacto</a>
+<div class="menu-inline">
+  <div class="menu-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#actualidad">Actualidad</a>
+    <a href="#ejecutiva">Ejecutiva local</a>
+    <a href="#ficha-acceso">Ficha de acceso</a>
+    <a href="#estatutos">Estatutos</a>
+    <a href="#contacto">Contacto</a>
+  </div>
 </div>
-    
-      </nav>
-      
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio">Inicio</a>
+  <a href="#actualidad">Actualidad</a>
+  <a href="#ejecutiva">Ejecutiva local</a>
+  <a href="#ficha-acceso">Ficha de acceso</a>
+  <a href="#estatutos">Estatutos</a>
+  <a href="#contacto">Contacto</a>
+</div>
     </div>
   </header>
-
 <!-- Carousel placeholder inserted -->
 
 <section id="carrusel" style="padding:50px 0;">
@@ -2147,28 +2106,51 @@ show(0);
         </div>
       </div>
     </div>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </footer>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  /* Año automático (solo si existe) */
-  const year = document.getElementById("year");
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
-
-  /* Menú hamburguesa */
   const toggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".menu-links");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-  if (toggle && menu) {
-    toggle.addEventListener("click", function () {
-      menu.classList.toggle("active");
-    });
+  if (!toggle || !mobileMenu) return;
+
+  const MOBILE_WIDTH = 768;
+
+  // Estado inicial seguro
+  mobileMenu.classList.remove("open");
+  toggle.setAttribute("aria-expanded", "false");
+
+  function isMobile() {
+    return window.innerWidth <= MOBILE_WIDTH;
   }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }
+
+  // Click SOLO permitido en móvil
+  toggle.addEventListener("click", () => {
+    if (!isMobile()) {
+      closeMobileMenu();
+      return;
+    }
+
+    const isOpen = mobileMenu.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  // Cerrar al pulsar enlace
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+
+  // Control absoluto al redimensionar
+  window.addEventListener("resize", () => {
+    if (!isMobile()) {
+      closeMobileMenu();
+    }
+  });
 
 });
 </script>
