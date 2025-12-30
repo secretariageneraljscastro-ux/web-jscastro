@@ -1309,23 +1309,51 @@ header * { color:white !important; }
   }
 }
 /* =====================================================
-   FIX DEFINITIVO: OCULTAR MENÚ MÓVIL EN DESKTOP
+   FIX FINAL HEADER – DESKTOP vs MÓVIL
    ===================================================== */
-@media (min-width: 900px) {
 
-  /* Ocultar hamburguesa */
-  .menu-toggle {
-    display: none !important;
-  }
+/* ===== DESKTOP ===== */
+@media (min-width: 901px) {
 
-  /* Ocultar menú móvil COMPLETO */
+  /* Ocultar menú móvil y hamburguesa */
+  .menu-toggle,
   .mobile-menu {
     display: none !important;
   }
 
-  /* Asegurar menú de escritorio visible */
+  /* Mostrar solo menú de escritorio */
   .menu-inline {
     display: block !important;
+  }
+
+  /* EVITAR texto suelto */
+  .menu-links {
+    display: flex !important;
+  }
+}
+
+/* ===== MÓVIL ===== */
+@media (max-width: 900px) {
+
+  /* Ocultar menú escritorio */
+  .menu-inline {
+    display: none !important;
+  }
+
+  /* Mostrar hamburguesa */
+  .menu-toggle {
+    display: block !important;
+  }
+
+  /* Menú móvil cerrado por defecto */
+  .mobile-menu {
+    display: none !important;
+    flex-direction: column;
+  }
+
+  /* Menú móvil abierto */
+  .mobile-menu.active {
+    display: flex !important;
   }
 }
  </style>
@@ -2138,23 +2166,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!toggle || !mobileMenu) return;
 
-  // Abrir / cerrar menú móvil (SOLO en móvil)
   toggle.addEventListener('click', () => {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 900) {
       mobileMenu.classList.toggle('active');
     }
   });
 
-  // Cerrar menú al pulsar un enlace
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
     });
   });
 
-  // Seguridad total: nunca abierto en escritorio
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 600) {
+    if (window.innerWidth > 900) {
       mobileMenu.classList.remove('active');
     }
   });
