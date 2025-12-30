@@ -1326,13 +1326,41 @@ header * { color:white !important; }
     flex-direction: column;
   }
 }
-@media (min-width: 901px) {
+/* =====================================
+   FIX DEFINITIVO: MENÚ SOLO EN MÓVIL
+   ===================================== */
 
-  /* Ocultar todo lo móvil */
+/* ESCRITORIO */
+@media (min-width: 901px) {
+  .menu-inline {
+    display: none !important;   /* 🔥 este es el que faltaba */
+  }
+
   .menu-toggle,
   .mobile-menu {
     display: none !important;
   }
+}
+
+/* MÓVIL */
+@media (max-width: 900px) {
+  .menu-inline {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block !important;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
  </style>
 </head>
