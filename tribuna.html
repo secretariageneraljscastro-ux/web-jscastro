@@ -105,14 +105,128 @@ body {
     font-size: 36px;
   }
 }
+  .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header {
+  background:#cc0000;
+  padding:40px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.logo-wrap {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+
+.logo-img {
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.logo-text-main {
+  color:white;
+  font-weight:800;
+  font-size:18px;
+  line-height:1.1;
+}
+
+.logo-text-sub {
+  color:white;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.menu-inline {
+  display:flex;
+}
+
+.menu-links {
+  display:flex;
+  gap:10px;
+  background:white;
+  padding:8px 14px;
+  border-radius:999px;
+}
+
+.menu-links a {
+  color:#b11226;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
+
+.menu-links a:hover {
+  opacity:0.7;
+}
 </style>
 </head>
 
 <body>
 
   <header>
-    <!-- Aquí puedes copiar el mismo menú/header que tienes en index.html -->
-  </header>
+  <div class="container">
+    <nav class="nav">
+
+      <a href="index.html" class="logo-wrap">
+        <img src="logo.jpg" class="logo-img">
+
+        <div>
+          <div class="logo-text-main">
+            JUVENTUDES SOCIALISTAS
+          </div>
+
+          <div class="logo-text-sub">
+            CASTRO-URDIALES
+          </div>
+        </div>
+      </a>
+
+      <div class="menu-inline">
+        <div class="menu-links">
+
+          <a href="index.html">Inicio</a>
+
+          <a href="index.html#actualidad">
+            Actualidad
+          </a>
+
+          <a href="index.html#ejecutiva">
+            Ejecutiva local
+          </a>
+
+          <a href="index.html#ficha-acceso">
+            Ficha de acceso
+          </a>
+
+          <a href="index.html#estatutos">
+            Estatutos
+          </a>
+
+          <a href="index.html#contacto">
+            Contacto
+          </a>
+
+        </div>
+      </div>
+
+    </nav>
+  </div>
+</header>
 
   <main class="pagina-tribuna">
 
