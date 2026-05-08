@@ -124,105 +124,55 @@ header {
   gap:12px;
 }
 
- .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+.logo-wrap {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
 
-    .logo-img {
-      height: 50px;
-      width: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
+.logo-img {
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+}
 
-    .logo-text-main {
-      font-weight: 800;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      line-height: 1.2;
-    }
+.logo-text-main {
+  color:white;
+  font-weight:800;
+  font-size:18px;
+  line-height:1.1;
+}
 
-    .logo-text-main span {
-      color: var(--rojo-oscuro);
-    }
+.logo-text-sub {
+  color:white;
+  font-size:12px;
+  letter-spacing:2px;
+}
 
-    .logo-text-sub {
-      font-size: 0.7rem;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
+.menu-inline {
+  display:flex;
+}
 
-    .menu-inline {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-    }
+.menu-links {
+  display:flex;
+  gap:10px;
+  background:white;
+  padding:8px 14px;
+  border-radius:999px;
+}
 
-    .menu-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      border-radius: 999px;
-      padding: 4px;
-      background: rgba(255, 235, 238, 0.9);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
+.menu-links a {
+  color:#b11226;
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+}
 
-    .menu-links a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      transition: background 0.2s, color 0.2s, transform 0.1s;
-      font-size: 0.84rem;
-    }
-
-   .menu-links a:hover {
-      background: #fff;
-      color: var(--rojo-oscuro);
-      transform: translateY(-1px);
-    }
-
-    /* BOTONES */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: none;
-      cursor: pointer;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: transform 0.1s, box-shadow 0.1s, background 0.2s, color 0.2s;
-      text-decoration: none;
-    }
-
-    .btn-rojo {
-      background: linear-gradient(135deg, var(--rojo), var(--rojo-oscuro));
-      color: #fff;
-      box-shadow: 0 8px 16px rgba(198, 40, 40, 0.35);
-    }
-
-    .btn-rojo:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 22px rgba(198, 40, 40, 0.45);
-    }
-
-    .btn-outline {
-      background: rgba(255,255,255,0.9);
-      color: var(--rojo-oscuro);
-      border: 1px solid var(--rojo);
-    }
-
-    .btn-outline:hover {
-      background: var(--rojo-suave);
-    }
-
+.menu-links a:hover {
+  opacity:0.7;
+}
 </style>
 </head>
 
