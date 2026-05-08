@@ -5,6 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tribuna de opinión | Juventudes Socialistas Castro Urdiales</title>
   <link rel="stylesheet" href="style.css">
+ <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff7f8;
+  color: #1f1f1f;
+}
+
+.pagina-tribuna {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 30px 20px;
+}
+
+.cabecera-tribuna {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.etiqueta {
+  color: #b11226;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.cabecera-tribuna h1 {
+  font-size: 48px;
+  color: #9b1022;
+  margin: 10px 0;
+}
+
+.cabecera-tribuna p {
+  font-size: 20px;
+  color: #555;
+}
+
+.tarjeta-tribuna {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  background: white;
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.tarjeta-tribuna img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.contenido-tribuna h2 {
+  font-size: 34px;
+  color: #9b1022;
+  margin: 10px 0;
+}
+
+.contenido-tribuna p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.autor {
+  color: #666;
+  font-size: 15px;
+  margin: 20px 0;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.boton-contorno {
+  border: 2px solid #b11226;
+  color: #b11226;
+  background: white;
+}
+
+.boton-contorno:hover {
+  background: #b11226;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .tarjeta-tribuna {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecera-tribuna h1 {
+    font-size: 36px;
+  }
+}
+</style>
 </head>
 
 <body>
