@@ -173,6 +173,43 @@ header {
 .menu-links a:hover {
   opacity:0.7;
 }
+  @media (max-width: 768px) {
+
+  .cabecera,
+  .header,
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .logo {
+    width: 110px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .menu,
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .menu a,
+  nav ul li a {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+}
 </style>
 </head>
 
