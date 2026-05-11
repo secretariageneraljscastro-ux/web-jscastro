@@ -274,51 +274,71 @@ header .logo-text-main * {
     font-weight: 700 !important; /* negrita */
 }
     
- @media (max-width: 600px) {
+@media (max-width: 768px) {
 
-  /* Ocultar textos del logo (solo imagen) */
-  .logo-text-main,
-  .logo-text-sub {
-    display: none !important;
+  header {
+    padding: 24px 0;
   }
 
-  /* Centrar logo */
-  .logo-wrap {
-    justify-content: center !important;
-    width: 100%;
-  }
-
-  /* Header en columna */
   .nav {
     flex-direction: column;
-    height: auto;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
   }
 
-  /* Hamburguesa visible y centrada */
-  .hamburger,
-  .menu-toggle,
-  .nav-toggle,
-  .mobile-menu-toggle {
-    display: block !important;
-    margin: 0 auto;
-  }
-
-  /* Menú normal NO visible en móvil */
-  .menu-links {
-    display: none !important;
-  }
-
-  .menu-links.active {
-    display: flex !important;
+  .logo-wrap {
     flex-direction: column;
-    gap: 12px;
-    margin-top: 12px;
+    justify-content: center;
+    text-align: center;
   }
 
-.menu-toggle {
-  display: block !important;
-}
+  .logo-img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .menu-inline {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .menu-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .cabecera-tribuna h1 {
+    font-size: 38px;
+  }
+
+  .cabecera-tribuna p {
+    font-size: 18px;
+  }
+
+  .tarjeta-tribuna {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .tarjeta-tribuna img {
+    height: 240px;
+  }
+
+  .contenido-tribuna h2 {
+    font-size: 28px;
+  }
+
 }
    /* ===============================
    HERO CENTRADO EN MÓVIL
