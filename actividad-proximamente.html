@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5DKX3BV8');</script>
 <!-- End Google Tag Manager -->
-  <style>
+   <style>
     :root {
       --rojo: #e53935;
       --rojo-oscuro: #b71c1c;
@@ -53,89 +53,126 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin: 0 auto;
       padding: 0 16px;
     }
+/* CABECERA */
+header {
+  background: #cc0000;
+  padding: 40px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
 
-    /* CABECERA */
-    header { background:#cc0000 !important; padding:40px 0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #ffccd2;
-    }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
 
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-      gap: 12px;
-    }
+.logo-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: none;
+}
 
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+.logo-text-main {
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.1;
+}
 
-    .logo-img {
-      height: 50px;
-      width: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-    }
+.logo-text-main span {
+  color: white;
+}
 
-    .logo-text-main {
-      font-weight: 800;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      line-height: 1.2;
-    }
+.logo-text-sub {
+  color: white;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
 
-    .logo-text-main span {
-      color: var(--rojo-oscuro);
-    }
+.menu-inline {
+  display: flex;
+}
 
-    .logo-text-sub {
-      font-size: 0.7rem;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
+.menu-links {
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  box-shadow: none;
+}
 
-    .menu-inline {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-    }
+.menu-links a {
+  color: #b11226;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0;
+}
 
-    .menu-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      border-radius: 999px;
-      padding: 4px;
-      background: rgba(255, 235, 238, 0.9);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
+.menu-links a:hover {
+  opacity: 0.7;
+}
 
-    .menu-links a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      transition: background 0.2s, color 0.2s, transform 0.1s;
-      font-size: 0.84rem;
-    }
+/* MÓVIL */
+@media (max-width: 768px) {
+  header {
+    padding: 32px 0 48px;
+  }
 
-   .menu-links a:hover {
-      background: #fff;
-      color: var(--rojo-oscuro);
-      transform: translateY(-1px);
-    }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .logo-wrap {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .menu-inline {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 26px;
+    padding: 22px 20px;
+    border-radius: 28px;
+    width: calc(100% - 32px);
+  }
+
+  .menu-links a {
+    font-size: 18px;
+    padding: 6px 8px;
+  }
+
+  .hero-actividad {
+    padding-top: 55px;
+  }
+}
 
     /* BOTONES */
     .btn {
@@ -238,87 +275,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       text-decoration: underline;
     }
 
-    /* RESPONSIVE GENERAL */
-    @media (max-width: 900px) {
-      .menu-inline {
-        justify-content: flex-end;
-        flex-wrap: wrap;
-      }
-    }
+  @media (max-width: 768px) {
 
-    @media (max-width: 600px) {
-      header {
-        position: static;
-      }
-      .menu-inline {
-        justify-content: center;
-      }
-      .menu-links {
-        justify-content: center;
-      }
-    } 
-
-/* circular logo */
-.logo-img { border-radius: 50% !important; height:120px !important; width:120px !important; object-fit:cover; }
- 
-/* Fuerza a blanco todo el texto del bloque del logo, sin afectar al menú */
-header .logo-wrap *,
-header .logo-text-wrapper *,
-header .logo-text-main * {
-    color: #ffffff !important;
-}                    
-
-/* Menú en rojo y negrita, igual que en la página principal */
-.menu-inline .menu-links a {
-    color: #d33 !important;      /* rojo */
-    font-weight: 700 !important; /* negrita */
-}
-    
- @media (max-width: 600px) {
-
-  /* Ocultar textos del logo (solo imagen) */
-  .logo-text-main,
-  .logo-text-sub {
-    display: none !important;
+  header {
+    padding: 24px 0;
   }
 
-  /* Centrar logo */
-  .logo-wrap {
-    justify-content: center !important;
-    width: 100%;
-  }
-
-  /* Header en columna */
   .nav {
     flex-direction: column;
-    height: auto;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
   }
 
-  /* Hamburguesa visible y centrada */
-  .hamburger,
-  .menu-toggle,
-  .nav-toggle,
-  .mobile-menu-toggle {
-    display: block !important;
-    margin: 0 auto;
-  }
-
-  /* Menú normal NO visible en móvil */
-  .menu-links {
-    display: none !important;
-  }
-
-  .menu-links.active {
-    display: flex !important;
+  .logo-wrap {
     flex-direction: column;
-    gap: 12px;
-    margin-top: 12px;
+    justify-content: center;
+    text-align: center;
   }
 
-.menu-toggle {
-  display: block !important;
-}
+  .logo-img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .menu-inline {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .menu-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
 }
    /* ===============================
    HERO CENTRADO EN MÓVIL
@@ -510,8 +509,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </a>
-        <div class="menu-toggle">☰</div>
-
+        
+<div class="menu-inline">
 <div class="menu-links">
   <a href="index.html#inicio">Inicio</a>
   <a href="index.html#actualidad">Actualidad</a>
@@ -519,10 +518,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="index.html#ficha-acceso">Ficha de acceso</a>
   <a href="index.html#estatutos">Estatutos</a>
   <a href="index.html#contacto">Contacto</a>
+  </div>
 </div>
-      </nav>
-      
-    </div>
+
+</nav>
   </header>
   <main>
     <section class="hero-actividad">
