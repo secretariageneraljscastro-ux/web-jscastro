@@ -57,12 +57,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* CABECERA */
     header { background:#cc0000 !important; padding:40px 0;
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #ffccd2;
     }
 
 
@@ -238,43 +232,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       text-decoration: underline;
     }
 
-    /* RESPONSIVE GENERAL */
-    @media (max-width: 900px) {
-      .menu-inline {
-        justify-content: flex-end;
-        flex-wrap: wrap;
-      }
-    }
-
-    @media (max-width: 600px) {
-      header {
-        position: static;
-      }
-      .menu-inline {
-        justify-content: center;
-      }
-      .menu-links {
-        justify-content: center;
-      }
-    } 
-
-/* circular logo */
-.logo-img { border-radius: 50% !important; height:120px !important; width:120px !important; object-fit:cover; }
- 
-/* Fuerza a blanco todo el texto del bloque del logo, sin afectar al menú */
-header .logo-wrap *,
-header .logo-text-wrapper *,
-header .logo-text-main * {
-    color: #ffffff !important;
-}                    
-
-/* Menú en rojo y negrita, igual que en la página principal */
-.menu-inline .menu-links a {
-    color: #d33 !important;      /* rojo */
-    font-weight: 700 !important; /* negrita */
-}
-    
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
 
   header {
     padding: 24px 0;
@@ -317,28 +275,6 @@ header .logo-text-main * {
     font-size: 14px;
     padding: 6px 8px;
   }
-
-  .cabecera-tribuna h1 {
-    font-size: 38px;
-  }
-
-  .cabecera-tribuna p {
-    font-size: 18px;
-  }
-
-  .tarjeta-tribuna {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-
-  .tarjeta-tribuna img {
-    height: 240px;
-  }
-
-  .contenido-tribuna h2 {
-    font-size: 28px;
-  }
-
 }
    /* ===============================
    HERO CENTRADO EN MÓVIL
